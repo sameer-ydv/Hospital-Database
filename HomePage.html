@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>Home Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+	</style>
+	<link rel="stylesheet" a href="css\style_HomePage.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+
+		<div class="nav">
+			<h1>HOSPITAL DATABASE</h1>
+			<!-- <a href="login/LoginPage.html" class="login">Login</a> -->
+		</div>
+		<br>
+		<!-- <center>
+		<h2><a href="select/select.html">Select</a></h2>
+		<h2><a href="update/update.html">Update</a></h2>
+		<h2><a href="delete/delete.html">Delete</a></h2>
+		</center>
+ -->
+ 	<div class="row">
+ 		<div class="column side" style="background-color: #b3d9ff">
+		<div class="dropdown" id="first">
+			<p id="hvr-float-shadow" href="#0"><img src='image/patient.png' height=150></p>
+			<div class="dropdown-content">
+				<p id = "heading">Patients</p>
+    			<a href="insert/patient_insert.html" target="content"><i class="fas fa-angle-double-right"></i>Insert</a>
+  			</div>
+		</div>
+
+		<div class="dropdown">
+		<p id="hvr-float-shadow" href="#0"><img src='image/doctor.png' height=150></p>
+		<div class="dropdown-content">
+		<p id = "heading">Doctors</p>
+    	<a href="insert/doctor_insert.html" target="content"><i class="fas fa-angle-double-right"></i>Insert</a>
+  	</div>
+		</div>
+
+		<div class="dropdown">
+		<p id="hvr-float-shadow" href="#0"><img src='image/assistant.png' height=150></p>
+		<div class="dropdown-content">
+		<p id = "heading">Staff</p>
+    	<a href="insert/staff_insert.html" target="content"><i class="fas fa-angle-double-right"></i>Insert</a>
+  	</div>
+		</div>
+
+		<div class="dropdown">
+		<p id="hvr-float-shadow" href="#0"><img src='image/medicine.png' height=150></p>
+		<div class="dropdown-content">
+		<p id = "heading">Medicine</p>
+    	<a href="insert/medicine_insert.html" target="content"><i class="fas fa-angle-double-right"></i>Insert</a>
+  	</div>
+		</div>
+
+		<div class="dropdown">
+		<p id="hvr-float-shadow" href="#0"><img src='image/room.png' height=150></p>
+		<div class="dropdown-content">
+		<p id = "heading">Medical Rooms</p>
+    	<a href="insert/room_insert.html" target="content"><i class="fas fa-angle-double-right"></i>Insert</a>
+  	</div>
+		</div>
+	</div>
+	<div class="column middle" id="myDIV">
+    <ul>
+      <li ><a href="select/select.html" target="content" >SELECT</a></li>
+      <li><a href="update/update.html" target="content" >UPDATE</a></li>
+      <li><a href="delete/delete.html" target="content" >DELETE</a></li>
+    </ul>
+
+    <div class="content"><iframe src="select/select.html" name="content" width="100%" height="100%"></iframe></div>
+</div>
+</div>
+<script>
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
